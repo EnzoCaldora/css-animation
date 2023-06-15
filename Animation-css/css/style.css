@@ -1,0 +1,411 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+}
+
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.test-icon {
+    background: linear-gradient(rgb(90, 62, 156), rgb(30, 116, 131));
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    animation: contentTransition 3000ms linear;
+    border-radius: 30px;
+}
+
+.test-icon i {
+    font-size: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 80px;
+    height: 20%;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: left 3000ms linear;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: right 3000ms linear;
+}
+
+.fa-twitter-square {
+    animation: twitterAnimation 5000ms ease-out infinite 3500ms;
+}
+
+.fa-envelope {
+    animation: messageBounce 3000ms linear infinite 6500ms;
+}
+
+.fa-heart {
+    animation: heartGrow 5000ms linear infinite 5500ms;
+}
+
+.fa-exclamation-triangle {
+    animation: warningPulse 1000ms linear infinite 7500ms;
+}
+
+.fa-dollar-sign {
+    animation: dollarsAnimation 5000ms ease-in infinite 4500ms;
+}
+
+.fa-comment-dots {
+    animation: commentShake 1300ms linear infinite 8500ms;
+}
+
+
+
+@media screen and (max-width: 414px) {
+    .test-icon {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: flex;
+    }
+
+    .left {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 415px) and (max-width: 912px) {
+    .test-icon {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: flex;
+    }
+
+    .left {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+    .test-icon {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: flex;
+    }
+
+    .left {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@keyframes dollarsAnimation {
+
+    0% {
+
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0.5;
+    }
+
+    50% { 
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0.5;
+    }
+
+    100% {
+
+        opacity: 0;
+    }
+
+}
+
+@keyframes twitterAnimation {
+    0% {
+        transform: rotate(180deg) translateY(80px);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes messageBounce {
+    0% {
+        transform: translateY(-50%);
+        /*opacity: 0;*/
+    }
+
+    5% {
+        transform: translateY(-50%)
+        0%);
+        /*opacity: 0;*/
+    }
+
+    15% {
+        transform: translateY(0);
+        padding-bottom: 5px;
+    }
+
+    30% {
+        transform: translateY(-30%);
+    }
+
+    40% {
+        transform: translateY(0%);
+        padding-bottom: 6px;
+    }
+
+    50% {
+        transform: translateY(-20%);
+    }
+
+    70% {
+        transform: translateY(0%);
+        padding-bottom: 7px;
+    }
+
+    80% {
+        transform: translateY(-10%);
+    }
+
+    90% {
+        transform: translateY(0%);
+        padding-bottom: 8px;
+    }
+
+    95% {
+        transform: translateY(-5%);
+    }
+
+    97% {
+        transform: translateY(0%);
+        padding-bottom: 9px;
+    }
+
+    100% {
+        transform: translateY(0);
+        padding-bottom: 9px;
+        /*opacity: 1;*/
+    }
+}
+
+@keyframes commentShake {
+    0% {
+        transform: translate(0,0) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(5px, 5px) rotate(5deg);
+    }
+
+    50% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    75% {
+        transform: translate(-5px, 5px) rotate(-5deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+@keyframes heartGrow {
+    0% {
+        transform: translateY(0);
+    }
+
+    5% {
+        transform: translateY(-20px) scale(1);
+    }
+
+    15% {
+        transform: translateY(-40px) scale(1.2);
+    }
+
+    25% {
+        transform: translateY(-60px) scale(1.5);
+    }
+
+    35% {
+        transform: translateY(-80px) scale(1.7);
+    }
+
+    45% {
+        transform: translateY(-90px) scale(1.9);
+    }
+
+    50% {
+        transform: translateY(-100px) scale(2);
+    }
+
+    55% {
+        transform: translateY(-90px) scale(1.9);
+    }
+
+    65% {
+        transform: translateY(-80px) scale(1.7);
+    }
+
+    75% {
+        transform: translateY(-60px) scale(1.5);
+    }
+
+    85% {
+        transform: translateY(-40px) scale(1.2);
+    }
+
+    95% {
+        transform: translateY(-20px) scale(1);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes warningPulse {
+    0% {
+        transform: scale(1);
+
+    }
+
+    10% {
+        transform: scale(1.5);
+    }
+
+    20% {
+        transform: scale(1);
+        transform: matrix(100);
+    }
+
+    30% {
+        transform: scale(1.5);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+
+    }
+
+    60% {
+        transform: scale(1);
+    }
+
+    70% {
+        transform: scale(1.5);
+    }
+
+    80% {
+        transform: scale(1);
+
+    }
+
+    90% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes contentTransition {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translateY(-50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes left {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes right {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
