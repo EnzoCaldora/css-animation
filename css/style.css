@@ -144,7 +144,15 @@ body {
         width: 80%;
         display: flex;
     }
+    .left {
+        display: flex;
+        flex-direction: column;
+    }
 
+    .right {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 @keyframes dollarsAnimation {
